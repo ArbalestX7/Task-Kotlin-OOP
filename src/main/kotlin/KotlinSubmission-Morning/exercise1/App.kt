@@ -10,7 +10,14 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val namaDepan = "Dito"
+    val namaBelakang = "Iqbal Kusuma"
+    val umur = 21
+    val isSingle = true
 
+    println("Nama saya adalah ${namaDepan + namaBelakang}")
+    println("Umur saya $umur")
+    println("Apakah saya single ? $isSingle")
 }
 
 
@@ -19,7 +26,7 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    return println("groupId : $groupId\ngroupMember : $groupMember\nSession : $session ")
 }
 
 /**
@@ -30,7 +37,21 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  */
 fun myTeam(): List<Any> {
 
-    return listOf()
+    val anggota = listOf(
+        "Austin Nicholas Tham",
+        "Muhammad Firdaus",
+        "Dito Iqbal Kusuma",
+        "Mutiara Sabrina Jauhari",
+        "Rahmad Noor Ikhsan",
+        "Fadhila Risfania",
+        "Aina Fazla",
+        "Adityo Khori Ramadhan",
+        "Rizka Hilmi Putri",
+        "Alfin Syatriawan",
+        "Kayla Vyanca Atalaya"
+    )
+
+    return listOf(anggota.filter { it == "Dito Iqbal Kusuma" })
 }
 
 /**
@@ -41,10 +62,22 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf<String>("Kak Jovian", "Kak Imam")
+    val countOfGroup = arrayOf<String>(
+        "Austin Nicholas Tham",
+        "Muhammad Firdaus",
+        "Dito Iqbal Kusuma",
+        "Mutiara Sabrina Jauhari",
+        "Rahmad Noor Ikhsan",
+        "Fadhila Risfania",
+        "Aina Fazla",
+        "Adityo Khori Ramadhan",
+        "Rizka Hilmi Putri",
+        "Alfin Syatriawan",
+        "Kayla Vyanca Atalaya"
+    )
 
-    return 0
+    return mentor.size + countOfGroup.size
 }
 
 fun main() {
@@ -62,6 +95,19 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail(
+        "Eternal Light",
+        listOf("Austin Nicholas Tham",
+            "Muhammad Firdaus",
+            "Dito Iqbal Kusuma",
+            "Mutiara Sabrina Jauhari",
+            "Rahmad Noor Ikhsan",
+            "Fadhila Risfania",
+            "Aina Fazla",
+            "Adityo Khori Ramadhan",
+            "Rizka Hilmi Putri",
+            "Alfin Syatriawan",
+            "Kayla Vyanca Atalaya"),
+        "Morning")
 
 }
